@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Existencial Definitivo</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulario Altamente Innecesario</h1>
+        <p class="subtitle">Responde las 5 preguntas bajo tu propio riesgo.</p>
+
+        <form id="absurdForm">
+            
+            <!-- Campo 1 -->
+            <div class="form-group">
+                <label for="q1">1. Si un árbol cae en un bosque y nadie lo escucha, ¿de qué color era?</label>
+                <select id="q1" name="q1" required>
+                    <option value="">-- Elige un dilema --</option>
+                    <option value="A">Verde fluorescente con sabor a menta</option>
+                    <option value="B">Infrarrojo pero con actitud</option>
+                    <option value="C">Una ilusión óptica de los extraterrestres</option>
+                </select>
+            </div>
+
+            <!-- Campo 2 -->
+            <div class="form-group">
+                <label>2. En una escala del 1 al pingüino, ¿cuánto te gusta el pan?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q2" value="A" required> Mayo en un martes lluvioso</label>
+                    <label><input type="radio" name="q2" value="B"> 42, pero en minúsculas</label>
+                    <label><input type="radio" name="q2" value="C"> Solo si el pan me mira primero</label>
+                </div>
+            </div>
+
+            <!-- Campo 3 -->
+            <div class="form-group">
+                <label for="q3">3. Nivel de sospecha sobre tus calcetines desaparecidos:</label>
+                <input type="range" id="q3" name="q3" min="0" max="100" value="50">
+                <div class="range-labels">
+                    <span>Están de vacaciones</span>
+                    <span>Montaron su propio país</span>
+                </div>
+            </div>
+
+            <!-- Campo 4 -->
+            <div class="form-group">
+                <label for="q4">4. Selecciona la hora exacta en la que los patos traman algo:</label>
+                <input type="time" id="q4" name="q4" required>
+            </div>
+
+            <!-- Campo 5 -->
+            <div class="form-group">
+                <label for="q5">5. Escribe una disculpa formal dirigida a tu tostadora:</label>
+                <textarea id="q5" name="q5" rows="3" placeholder="Querida tostadora, lamento haber tostado pan congelado..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">Procesar Respuestas Absurdas</button>
+        </form>
+
+        <!-- Área de Resultado -->
+        <div id="result" class="hidden">
+            <h2>Tu Diagnóstico Filosófico:</h2>
+            <p id="resultText"></p>
+            <button id="resetBtn">Reiniciar el Universo</button>
+        </div>
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
