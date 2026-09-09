@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+
     <style>
         body {
             margin: 0;
             overflow: hidden;
             background: #111;
-        }
-
-        #pantalla {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            padding: 5px;
+            height: 100vh;
         }
 
         .cubo {
+            position: absolute;
             width: 40px;
             height: 40px;
             animation: aparecer .2s;
@@ -25,6 +22,7 @@
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
@@ -34,18 +32,21 @@
 
 <body>
 
-<div id="pantalla"></div>
-
 <script>
-document.body.onclick = () => {
-    let cubo = document.createElement("div");
+    document.body.onclick = (evento) => {
 
-    cubo.className = "cubo";
-    cubo.style.background =
-        `hsl(${Math.random() * 360}, 100%, 50%)`;
+        let cubo = document.createElement("div");
 
-    document.getElementById("pantalla").appendChild(cubo);
-};
+        cubo.className = "cubo";
+
+        cubo.style.background =
+            `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+        cubo.style.left = evento.clientX - 20 + "px";
+        cubo.style.top = evento.clientY - 20 + "px";
+
+        document.body.appendChild(cubo);
+    };
 </script>
 
 </body>
