@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Verifica que el archivo CSS esté en la misma carpeta y se llame exactamente cards.css -->
+    <link rel="stylesheet" href="./cards.css">
     <title>Document</title>
+
+    <style>
+        section {
+            /* Mantiene un espacio razonable para que el contenido de las cards quede visible más arriba */
+            padding: 40px 20px;
+        }
+    </style>
 </head>
-</html> 
+<body>
+
     <nav>
         <a href="#seccion1">Sección 1</a>
         <a href="#seccion2">Sección 2</a>
@@ -27,10 +37,33 @@
         <p>Contenido de la tercera sección.</p>
     </section>
 
-    <style>
-        section {
-            height: 100vh;
-        }
-    </style>
+    <!-- Contenedor de las tarjetas -->
+    <div class="card-container">
+        <article class="card">
+            <h3>Tarjeta 1</h3>
+            <p>Descripción corta de la primera tarjeta con información relevante.</p>
+        </article>
+
+        <article class="card">
+            <h3>Tarjeta 2</h3>
+            <p>Descripción corta de la segunda tarjeta con información relevante.</p>
+        </article>
+
+        <article class="card">
+            <h3>Tarjeta 3</h3>
+            <p>Descripción corta de la tercera tarjeta con información relevante.</p>
+        </article>
+
+        <article class="card">
+            <h3>Tarjeta 4</h3>
+            <p>Descripción corta de la cuarta tarjeta con información relevante.</p>
+        </article>
+
+        <article class="card">
+            <h3>Tarjeta 5</h3>
+            <p>Descripción corta de la quinta tarjeta con información relevante.</p>
+        </article>
+    </div>
+
 </body>
 </html>
