@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #pantalla {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .cubo {
+            width: 40px;
+            height: 40px;
+            animation: aparecer .2s;
+        }
+
+        @keyframes aparecer {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<button onclick="crearCubo()">Añadir cubo</button>
+
+<div id="pantalla"></div>
+
+<script>
+function crearCubo() {
+    let cubo = document.createElement("div");
+    cubo.className = "cubo";
+
+    cubo.style.background =
+        `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+    document.getElementById("pantalla").appendChild(cubo);
+}
+</script>
+
+</body>
+</html>
