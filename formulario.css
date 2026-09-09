@@ -1,0 +1,109 @@
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    background-color: #ffde59;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px #000;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #ff3131;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+select, textarea, input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    background-color: #00c2cb;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 12px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #000;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff914d;
+    border: 3px solid #000;
+    border-radius: 8px;
+}
+
+#resetBtn {
+    background-color: #ff3131;
+    margin-top: 15px;
+}
