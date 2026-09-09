@@ -2,10 +2,17 @@
 <html>
 <head>
     <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+        }
+
         #pantalla {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
+            padding: 5px;
         }
 
         .cubo {
@@ -27,20 +34,18 @@
 
 <body>
 
-<button onclick="crearCubo()">Añadir cubo</button>
-
 <div id="pantalla"></div>
 
 <script>
-function crearCubo() {
+document.body.onclick = () => {
     let cubo = document.createElement("div");
-    cubo.className = "cubo";
 
+    cubo.className = "cubo";
     cubo.style.background =
         `hsl(${Math.random() * 360}, 100%, 50%)`;
 
     document.getElementById("pantalla").appendChild(cubo);
-}
+};
 </script>
 
 </body>
