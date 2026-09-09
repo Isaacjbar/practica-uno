@@ -1,0 +1,18 @@
+.btn-estilo {
+      background-color: #007bff; /* Azul inicial */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.9s ease; /* Transición suave de color */
+    }
+
+    /* Clase CSS para el nuevo estado del botón */
+    .btn-activo {
+      background-color: #870abd; /* Verde */
+      border-color: chartreuse;
+      color: white;
+      border-radius: 5px;
+    }

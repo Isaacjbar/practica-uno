@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+            height: 100vh;
+        }
+
+        .cubo {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            animation: aparecer .2s;
+        }
+
+        @keyframes aparecer {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<script>
+    document.body.onclick = (evento) => {
+
+        let cubo = document.createElement("div");
+
+        cubo.className = "cubo";
+
+        cubo.style.background =
+            `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+        cubo.style.left = evento.clientX - 20 + "px";
+        cubo.style.top = evento.clientY - 20 + "px";
+
+        document.body.appendChild(cubo);
+    };
+</script>
+
+</body>
+</html>
