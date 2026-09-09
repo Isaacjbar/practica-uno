@@ -1,6 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <title>Página Principal</title>
+  
+  <link rel="stylesheet" href="theme-transitions.css">
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Botón de cambio de tema en el index -->
+  <button onclick="toggleTheme()">Cambiar Tema 🌙/☀️</button>
+
+  <!-- Enlace para ir a la página de pruebas -->
+  <a href="theme.html">Ir a la página de pruebas (theme.html)</a>
+
+  <script src="theme.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>

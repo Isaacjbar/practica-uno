@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Pruebas de Tema</title>
+  
+  <link rel="stylesheet" href="theme-transitions.css">
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- También tiene su botón para cambiar el tema -->
+  <button onclick="toggleTheme()">Cambiar Tema 🌙/☀️</button>
+
+  <h1>Página de Pruebas (theme.html)</h1>
+  <p>Aquí estás probando la nueva funcionalidad.</p>
+  
+  <!-- Enlace para regresar al index -->
+  <a href="index.html">Volver al Inicio (index.html)</a>
+
+  <script src="theme.js"></script>
+</body>
+</html>
